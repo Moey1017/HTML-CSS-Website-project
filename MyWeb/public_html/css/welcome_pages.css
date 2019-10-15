@@ -1,0 +1,373 @@
+html
+{
+    scroll-behavior: smooth;
+}
+body
+{
+    cursor:url(../LOLImages/cursor.png) 50 50, auto;
+    background: black;
+    overflow-x: hidden;
+    margin: 0px;
+}
+
+#navbar
+{
+    width: 100%;
+    background-color:black;
+    font-size: 45px;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    opacity: 0.7;
+    font-family: font2;
+    text-align: center;
+}
+
+#navbar a
+{
+    margin-left: 40px;
+    text-decoration: none;
+    color: #cccccc;
+}
+
+#navbar a:hover
+{
+    color: #ffffff;
+    border-bottom: 3px solid yellow;
+}
+
+/*navbar2*/
+#navbar_2
+{
+    font-family: font2;
+    position: fixed;
+    width: 90px;
+    top:10%;
+    right: 0%;
+    border-right: 3px red solid;
+    z-index: 100;
+}
+
+#navbar_2 a
+{
+    text-decoration:none;
+    color: #cccccc;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+#navbar_2 a:hover
+{
+    color: #ffffff;
+}
+#navbar_2:active
+{
+    border-right: 3px #cdff00 solid;
+}
+
+#image1
+{   
+    position: absolute;
+    z-index: 100;
+}
+
+#image1 img
+{
+    top: -600px;
+    left: 40px;
+    position: absolute;
+    width: 400px;
+    opacity: 0.1;
+}
+
+#image1 ul
+{
+    font-family: font1;
+    font-size: 50px;
+    margin-top: -445px;
+    margin-left: 55px;
+    list-style: none;
+}
+
+#image1 a
+{
+    text-decoration: none;
+    color: #cccccc;
+}
+
+#image1 ul 
+{
+    display: none;
+}
+
+#image1 a:hover 
+{
+    color: white;
+}
+
+@keyframes Small_big
+{
+    from 
+    {
+        opacity:0.1;
+    }
+    to 
+    {
+        opacity:1;
+    }
+}
+
+@keyframes list_1
+{
+    from 
+    {
+        opacity:0;
+        margin-left:-200px;
+    }
+    to 
+    {
+        margin-left:0px;
+        opacity:1;
+    }
+}
+
+#image1 img:hover 
+{
+    animation: Small_big 0.5s both linear;
+}
+
+#image1:hover ul 
+{
+    display:block;
+}
+
+#image1:hover ul li#D1
+{
+    animation: list_1 0.5s both linear;
+}
+
+#image1:hover ul li#D2
+{
+    animation: list_1 0.5s both linear;
+    animation-delay: 0.1s;
+}
+
+#image1:hover ul li#D3  
+{
+    animation: list_1 0.5s both linear;
+    animation-delay: 0.2s;
+}
+
+@font-face
+{
+    font-family :font2;
+    src:url(../wordstyle/AlmendraSC-Regular.otf);
+}
+
+.intro
+{
+    position:relative;
+    width: 100%;  
+}
+
+.intro .IMG1
+{
+    background: url(../LOLImages/1.jpg) no-repeat center center;
+    height: 800px;
+    position: relative;
+    background-size: cover;
+    z-index: 0;
+    border-bottom: 1px solid black;
+}
+
+.bg-video
+{
+    z-index:-1;
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.bg-video video 
+{
+    min-width: 100%;
+}
+
+@font-face
+{
+    font-family :font1;
+    src:url(../wordstyle/AlmendraSC-Bold.otf);
+}
+
+#paragraph1 
+{
+    font-family: font1;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%; 
+    font-size: 25px;
+    color:white;
+}
+
+.intro .IMG2
+{
+    background: url(../LOLImages/6.jpg) no-repeat center center;
+    z-index: 0;
+    height: 800px;
+    background-size: cover;
+    position: relative;
+    border-bottom: 1px solid white;
+}
+
+#paragraph2
+{
+    font-family: font1;
+    position: absolute;
+    color: white;
+    bottom: 7%;
+    right: 50%;
+    font-size:25px;
+}
+
+#iframe1
+{
+    position: relative;
+    padding:20px;
+}
+
+#iframe1, iframe
+{
+    margin: auto;
+    width:1096px;
+    height:615px;
+}
+
+#iframe1 iframe 
+{
+    border:5px solid white;
+}
+
+
+
+/*arrows beginning*/
+.arrow1 , .arrow2 , .arrow3
+{
+    width: 30px;
+    height: 30px;
+    box-shadow: -2px 2px 0 rgba(255,255,255,.5);
+    position: relative;
+    left: 50%;
+}
+
+.arrow1
+{
+    transform: rotate(-45deg);
+    animation: arrows 1s linear both;
+    animation-iteration-count: infinite;
+}
+
+.arrow2
+{
+    transform: rotate(-45deg);
+    animation: arrows 1s linear both;
+    animation-iteration-count: infinite;
+}
+
+.arrow3
+{
+
+    left: 50%;
+    transform: rotate(-45deg);
+    animation: arrows 1s linear both;
+    animation-iteration-count: infinite;
+}
+
+@keyframes arrows
+{
+    from
+    {
+        opacity:1
+    }
+    to
+    {
+        opacity:0;
+    }
+}
+   
+
+
+/*paragraphs beginning*/
+.paragraph3
+{
+    font-size: 28px;
+
+}
+
+.paragraph3, h2
+{
+    padding-top: 60px;
+}
+
+.paragraph3, h2, p
+{
+    position: relative;
+    color: white;
+    text-align: center;
+}
+
+
+
+/* bottom container*/
+.bottom
+{
+    width: 100%;
+    height: 100px;
+    position: relative;
+}
+
+#t1
+{
+    color:white;
+    position: absolute;
+    left: 105px;
+    font-size: 8px;
+    bottom: 0px;
+}
+
+.bottom #teen
+{
+    position:absolute;
+    left: 20px;
+    bottom: 4px;
+}
+
+.bottom #teen img 
+{
+    width: 75px;
+    height: 95px;
+}
+
+.bottom #riotIcon
+{
+    position: absolute;
+    right: 20px;    
+}
+
+.bottom #riotIcon img
+{
+    width:110px;
+    height:90px;
+}
+
+.bottom #copyright1
+{
+    color:grey;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+}
+

@@ -1,0 +1,361 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Nov 3, 2018, 12:45:23 PM
+    Author     : HP
+*/
+html
+{
+  scroll-behavior: smooth;
+}
+body
+{
+    cursor:url(../../LOLImages/cursor.png) 50 50, auto;
+    background-image: url(../LOLImages/bg-water.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+@font-face
+{
+    font-family :font2;
+    src:url(../wordstyle/AlmendraSC-Regular.otf);
+}        
+
+/*first navbar*/
+#navbar
+{
+    width: 100%;
+    background-color:black;
+    font-size: 45px;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    opacity: 0.7;
+    font-family: font2;
+    text-align: center;
+}
+
+#navbar a
+{
+    margin-left: 40px;
+    text-decoration: none;
+    color: #d1d1d1;
+}
+
+#navbar a:hover
+{
+    color: #ffffff;
+    border-bottom: 5px solid #f9eb4d;
+}
+
+/*second nv start*/
+#navbar_2
+{
+    z-index: 100;
+    font-family: font2;
+    position: fixed;
+    width: 200px;
+    top:10%;
+    right: 0%;
+    border-right: 3px red solid;
+}
+
+#navbar_2 a
+{
+    text-decoration:none;
+    color: #ad0d0d;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+#navbar_2 a:hover
+{
+    color: red;
+}
+
+#navbar_2:active
+{
+    border-right: 3px #cdff00 solid;
+}
+
+/*pages1*/
+.page_one
+{
+    position: relative;
+    height: 48em;
+}
+
+.mask_1 #mask
+{
+   -webkit-mask-box-image: url(../LOLImages/pyke_word.png);
+   -moz-mask-box-image: url(../LOLImages/pyke_word.png);
+   -ms-mask-box-image: url(../LOLImages/pyke_word.png);
+   -o-mask-box-image: url(../LOLImages/pyke_word.png);
+   mask-box-image: url(../LOLImages/pyke_word.png);    
+}
+
+.mask_1 img
+{
+	width:575px;
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        transform:translate(-50%,-50%);
+}
+
+   
+
+/* pyke 4 pictures */
+/*https://freefrontend.com/css-image-effects/*/
+.pyke
+{
+  width: 350px;
+  height: 250px;
+  /* center content using flex box */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* overlay */
+  box-shadow: 0 0 0 200px inset, 0 0 5px grey;
+  /* hover out transition */
+  transition: box-shadow 1s;
+  float: left;
+  margin: 10px;
+}
+
+/* pyke names */
+.pyke::after 
+{
+  width: 80%;
+  height: 80%;
+  display: block;
+  white-space: pre;
+  font: 15pt 'sigmar one';
+  color: white;
+  border: 2px solid;
+  text-align: center;
+  /* center content using flex box */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* hover out transition */
+  transition: opacity 1s .5s;
+}
+
+/* reveal pyke picture on hover */
+.pyke:hover 
+{
+  box-shadow: 0 0 0 5px inset, 0 0 5px grey, 0 0 10px grey inset;
+  transition: box-shadow 1s;
+}
+
+/* hide content word on hover */
+.pyke:hover::after 
+{
+  opacity: 0;
+  transition: opacity .5s;
+}
+
+#p1_pyke 
+{
+  background-image: url(../LOLImages/small_pyke1.jpg);
+  color: rgba(71, 121, 94, .9);
+}
+
+#p1_pyke::after 
+{
+  content: 'PYKE';
+}
+
+#p2_pyke 
+{
+  background-image: url(../LOLImages/small_pyke2.jpg);
+  color: rgba(65, 102, 114, .9);
+}
+
+#p2_pyke::after 
+{
+  content: 'PLAYING AS PYKE'
+}
+
+#p3_pyke 
+{
+  background-image: url(../LOLImages/small_pyke3.jpg);
+  color: rgba(38, 30, 2, .9);
+}
+
+#p3_pyke::after 
+{
+  content: 'PLAYING WITH PYKE'
+}
+
+#p4_pyke 
+{
+  background-image: url(../LOLImages/small_pyke4.jpg);
+  color: rgba(49, 5, 91, .9);
+}
+
+#p4_pyke::after 
+{
+  content: 'TRAILER'
+}
+
+.wrapper 
+{
+  left: 15px;
+  width: 100%;
+  height: 300px;
+  margin:  auto;
+  position: absolute;
+  top: 75%;
+  left: 51%;
+  transform:translate(-50%,-50%);
+  
+}
+
+
+
+/*playing playing*/
+h1
+{
+    font-size: 50px;
+    color: #b70b0b;
+    text-decoration: underline;
+}
+
+#pyke_1 , #pyke_2
+{
+    width: 70%;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+#pyke_2
+{
+    top: 42%;
+}
+
+.divider img
+{
+    width: 550px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+span
+{
+    font-family: font2;
+    color: #9ebfd6;
+    font-weight: bold;
+    font-size: 1.8rem;            
+}
+
+.pyke_playing
+{
+    margin-top: 400px;
+    position: relative;
+    height: 48em;
+    background-color: #000;
+}     
+
+#bg1
+{
+    position: absolute;
+    z-index: -1;
+    opacity: 0.3;
+    width: 100%;
+    height: 120%;
+}
+ 
+
+
+
+/*pyke playing*/
+.pyke_playing2
+{
+    margin-top: 400px;
+    position: relative;
+    height: 48em;
+    background-color: #000;
+}
+
+/*go next key*/
+#go_next
+{
+    position: absolute;
+    bottom: 10%;
+    right:2%;
+}
+
+#go_next a
+{
+    text-transform: uppercase;
+    text-decoration: none;
+    color: grey;
+    font-size: 30px; 
+}
+
+#go_next a:hover
+{
+    color: white;
+}
+
+/*second "back"*/
+#second_back
+{
+    position: absolute;
+    bottom: 10%;
+    left: 2%;
+}
+
+#second_back a
+{
+    text-transform: uppercase;
+    text-decoration: none;
+    color: grey;
+    font-size: 30px; 
+}
+
+#bg2
+{
+    position: absolute;
+    z-index: -1;
+    opacity: 0.3 ;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+/*last trailer*/
+.last_trailer
+{
+    margin-top: 400px;
+    position: relative;
+    height: 47em;
+    background-color: #000;
+}
+
+.trailer_video 
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%,-50%);
+}
+
+.trailer_video video
+{
+    width: 80em;;
+}

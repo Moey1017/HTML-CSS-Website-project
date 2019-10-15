@@ -1,0 +1,840 @@
+/* three thing to change one in css*/
+html
+{
+  scroll-behavior: smooth;
+  overflow: hidden;
+}
+body
+{
+    cursor:url(../LOLImages/cursor.png) 50 50, auto;
+    background-image: url(../LOLImages/bg-water.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    
+}
+
+@font-face
+{
+    font-family :font2;
+    src:url("../wordstyle/AlmendraSC-Regular.otf");
+}
+
+@font-face
+{
+    font-family :font3;
+    src:url("../wordstyle/1942.ttf");
+}
+
+@font-face
+{
+    font-family :font4;
+    src:url("../wordstyle/MAXRHODES.TTF");
+}
+
+@keyframes nav
+{
+   0%
+   {
+       visibility: collapse; /*to hide the nav*/
+       opacity:0;
+   }
+   100%
+   {
+       opacity:0.7;
+   }
+}
+
+
+
+/*first navbar*/
+#navbar
+{
+    animation-name: nav;
+    animation-delay: 10s;  /* 0 */
+    animation-duration: 1.5s;
+    animation-timing-function: ease-in;
+    animation-fill-mode:both;
+    
+    width: 100%;
+    background-color:black;
+    font-size: 45px;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    opacity: 0.7;
+    font-family: font2;
+    text-align: center;
+}
+
+#navbar a
+{
+    margin-left: 40px;
+    text-decoration: none;
+    color: #d1d1d1;
+}
+
+#navbar a:hover
+{
+    color: #ffffff;
+    border-bottom: 5px solid #f9eb4d;
+}
+
+
+
+/*second nav bar*/
+@keyframes nav_2
+{
+   0%
+   {
+       visibility: collapse;
+       opacity:0;
+   }
+   100%
+   {
+       opacity:1;
+   }
+}
+
+#navbar_2
+{
+    animation-name: nav_2;
+    animation-delay: 10s;  /* 0 */
+    animation-duration: 1.5s;
+    animation-timing-function: ease-in;
+    animation-fill-mode:both;
+    font-family: font2;
+
+    z-index: 100;
+    position: fixed;
+    width: 90px;
+    top:10%;
+    right: 0%;
+    border-right: 3px red solid;
+}
+
+#navbar_2 a
+{
+    text-decoration:none;
+    color: #ad0d0d;
+    font-size: 25px;
+}
+
+#navbar_2 a:hover
+{
+    color: red;
+}
+
+#navbar_2:active
+{
+    border-right: 3px #cdff00 solid;
+}
+
+
+
+/*first things start*/
+@keyframes display_none
+{
+    from
+    {
+        opacity:1
+    }
+    to
+    {
+        opacity:0;
+        display:none;
+        z-index:-100;
+    }
+}
+.part1
+{
+    z-index: -2;
+    background-color: black;
+    height:48em;
+    animation: display_none 1s linear both;
+    animation-delay: 8.7s;
+}
+
+/*all images in part1*/
+.part1 img
+{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%); 
+}
+
+/*pyke images*/
+@keyframes pyke_1
+{
+   0%
+   {
+       opacity:0;
+   }
+   5% 
+   {
+       opacity:0.1;
+   }
+   10% 
+   {
+       opacity:0;
+   }
+   15% 
+   {
+       opacity:0.2;
+   }
+   20% 
+   {
+       opacity:0;
+   }
+   25% 
+   {
+       opacity:0.3;
+   }
+   30% 
+   {
+       opacity:0;
+   }
+   35% 
+   {
+       opacity:0.4;
+   }
+   40% 
+   {
+       opacity:0;
+   }
+   45% 
+   {
+       opacity:0.5;
+   }
+   50% 
+   {
+       opacity:0;
+   }
+   55% 
+   {
+       opacity:0.6;
+   }
+   60% 
+   {
+       opacity:0;
+   }
+   65% 
+   {
+       opacity:0.7;
+   }
+   70% 
+   {
+       opacity:0;
+   }
+   75% 
+   {
+       opacity:0.8;
+   }
+   80%
+   {
+       opacity:0;
+   }
+   85% 
+   {
+       opacity:0.9;
+   }
+   90% 
+   {
+       opacity:0;
+   }
+   95% 
+   {
+       opacity:0.95;
+   }
+   98%
+   {
+       opacity:0;
+   }
+   99% 
+   {
+       opacity:1;
+   }
+    100% 
+   {
+       opacity:0;
+   }
+}
+
+.part1 #first_1
+{
+    animation-name: pyke_1;
+    animation-delay: 3s;
+    animation-duration: 4s;
+    animation-timing-function: ease-in;
+    animation-fill-mode:both;   
+}
+
+#first_1 img
+{
+    
+    width: 90%;
+    height:100%;
+}
+
+/*caution image*/
+@keyframes caution
+{
+   0%
+   {
+       opacity:1;
+   }
+   100%
+   {
+       opacity:0;
+   }
+}
+
+.part1 #cau img
+{
+   width: 300px;
+   animation-name: caution;
+   animation-delay: 0s;
+   animation-duration: 3s;
+   animation-timing-function: ease-in;
+   animation-fill-mode:both;   
+}
+
+/*text1 in part1*/
+@keyframes text_1
+{
+   0%
+   {
+       opacity:0;
+       font-size:5px;
+   }
+   30%
+   {
+       opacity:1;
+       font-size:75px;
+   }
+   100%
+   {
+       opacity:0;
+       font-size:150px;
+   }
+}
+
+#text1
+{
+    font-size: 130px;
+    color:red;
+    text-align: center;
+    font-family:font3;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+    animation-name: text_1;
+    animation-delay: 7s;
+    animation-duration: 5s;
+    animation-timing-function: ease;
+    animation-fill-mode:both;   
+}
+
+/*part 2 pages one start*/ 
+.part2
+{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    height: 48em;
+    background-color: #000;
+    z-index:-2;
+}
+ /*main img*/
+#first_2 img
+{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%); 
+    width: 90%;
+    height: 100%;
+}
+
+
+@keyframes pyke_2
+{
+   0%
+   {
+       opacity:0;
+   }
+   100%
+   {
+       opacity:1;
+   }
+}
+
+#first_2
+{
+   animation-name: pyke_2;
+   animation-delay: 8.5s;  /* 0 */
+   animation-duration: 2s;
+   animation-timing-function: ease;
+   animation-fill-mode:both;   
+}
+
+/* box_1 start*/
+#box_1
+{
+    animation-name: nav;
+    animation-delay: 10s;  /* 0 */
+    animation-duration: 1.5s;
+    animation-timing-function: ease-in;
+    animation-fill-mode:both;
+    
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+#box_1 h1
+{
+    padding:0;
+    margin: 0;
+    text-align: center;
+    
+    font-family: font2;
+    font-size: 80px;
+    background: -webkit-linear-gradient(#eef7c8, #066057);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#box_1 p
+{
+    padding:0;
+    margin: 0;
+    
+    font-family: font2;
+    font-size: 50px;
+    background: -webkit-linear-gradient(#eef2de, #cdff00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+}
+
+#box_2 
+{
+    animation-name: nav;
+    animation-delay: 10s;  /* 0 */
+    animation-duration: 1.5s;
+    animation-timing-function: ease-in;
+    animation-fill-mode:both;
+    
+    bottom: 35px;
+    right: 100px;
+    position: absolute;
+}
+
+#box_2 a
+{
+    color: #9ebfd6;
+    font-size: 30px;
+    text-decoration:none;
+}
+
+#box_2 a:hover
+{
+    color: white;
+}
+
+
+
+/*pages2*/
+#slider,.wrap,.slide-content 
+{
+  margin-top: 500px;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 100%;
+  height: 100vh;
+}
+
+.wrap 
+{
+  position: relative;
+}
+
+.slide 
+{
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.slide1
+{
+    background-image: url("../LOLImages/pyke2.jpg")
+}
+
+.slide2 
+{
+    background-image: url("../LOLImages/pyke4.jpg");
+}
+
+.slide3
+{
+    background-image: url("../LOLImages/pyke3.jpg");
+}
+
+.slide-content 
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.slide-content #span_1
+{
+    bottom: 80px;
+    left: 100px;
+    font-size: 2rem;
+    font-family: font4;
+    color: #eafffd;
+    width: 350px;
+    position: absolute;
+}
+
+@keyframes pyke_intro
+{
+   0%
+   {
+       opacity:0;
+   }
+   25%
+   {
+       opacity:0.25;
+   }
+   50%
+   {
+       opacity:0.5;
+   }
+   75%
+   {
+       opacity:0.75;
+   }
+   100%
+   {
+       opacity:1;
+   }
+}
+
+.slide-content #span_1:hover
+{
+    color: red;
+    
+    animation-name: pyke_intro;
+    animation-duration: 0.5s;
+    animation-timing-function: ease;
+    animation-fill-mode:both;   
+}
+
+.slide-content #divider_1Bottom
+{
+    position: absolute;
+    bottom: 40px;
+    left: 55px;
+    width: 430px;
+}
+
+.slide-content #divider_1Top
+{
+    position: absolute;
+    bottom: 450px;
+    left: 61px;
+    width: 430px;
+    transform:rotate(180deg);
+}
+
+
+
+/* second row in second pages*/
+.slide-content #span_2
+{
+    position: absolute;
+    bottom: 130px;
+    right: 190px;
+    font-size: 2.5rem;
+    font-family: font2;
+    width: 130px;
+    text-align: center;
+    
+    background: -webkit-linear-gradient(#eef2de, #cdff00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#border1
+{
+    position: absolute;
+    bottom: 10px;
+    right: 100px;
+}
+
+.slide-content #p1 a
+{
+    font-size: 1rem;
+    color: #9ebfd6;
+    position: absolute;
+    bottom: 90px;
+    right: 125px;
+}
+
+.slide-content #p1:hover
+{
+    color: white;
+}
+
+
+
+/*third row pages in second pages*/
+#span_3
+{
+    position: absolute;
+    bottom: 100px;
+    right: 100px;
+    width: 300px;
+    
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+    font-family: font2;
+}
+
+#divider_3
+{
+    width: 380px;
+    position: absolute;
+    bottom: 40px;
+    right: 53px;
+}
+
+.slide-content #p2
+{
+    font-size: 1rem;
+    font-weight: bold;
+    color:  white;
+    position: absolute;
+    bottom: 90px;
+    right: 85px;
+}
+#p2 a
+{
+    text-decoration: none;
+    color: #d1d1d1;
+}
+
+#p2 a:hover
+{
+    color: white;
+}
+
+/*Arrows css start*/
+.arrow 
+{
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    margin-top: -35px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+}
+
+#arrow-left 
+{
+    border-width: 15px 20px 15px 0;
+    border-color: transparent #fff transparent transparent;
+    left: 0;
+    margin-left: 30px;
+}
+
+#arrow-left:hover
+{
+    border-color: transparent red transparent transparent; 
+}
+
+#arrow-right 
+{
+    border-width: 15px 0 15px 20px;
+    border-color: transparent transparent transparent #fff;
+    right: 0;
+    margin-right: 30px;
+}
+
+#arrow-right:hover
+{
+    border-color: transparent transparent transparent red;
+}
+
+/*pages3 intro start*/
+.trailer
+{
+    margin-top: 500px;
+    height:55em;
+    background-color: black;
+}
+
+.trailer iframe
+{
+    position: absolute;
+    left: 5%;
+    margin-top: 120px;
+    width:900px;
+    height:500px;
+}
+
+#textpg3
+{
+    position: absolute;
+    right: 100px;
+    margin-top:150px;
+    width: 25%;
+}
+
+#textpg3 img
+{
+    width: 70px;
+    border: 1px goldenrod solid;
+    right: 25%;
+}
+
+#textpg3 h2
+{
+    color: #aa1616;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+#textpg3 p
+{
+    color: white;
+    color: #9ebfd6;
+}
+
+#innoncent
+{
+    position: absolute;
+    right: 145px;
+    margin-top: 470px;
+    width: 300px;
+    font-size: 30px;
+}
+
+#innoncent p
+{
+    color: #9ebfd6;
+}
+
+#divider_pg3 
+{
+    position: absolute;
+    margin-top: 540px;
+    width: 360px;
+    right: 140px;
+}
+
+#next_pg4 
+{
+    position: absolute;
+    right: 50px;
+    font-size: 30px;
+    margin-top:700px;
+}
+
+#next_pg4 a
+{
+    color: #9ebfd6;
+    font-size: 30px;
+    text-decoration: none;
+}
+
+#next_pg4 a:hover
+{
+    color: white;
+}
+
+
+
+/*pages4 start*/
+.intro_pyke
+{
+    margin-top: 500px;
+    height: 55em;
+    background-color: black;
+    position: relative;
+}
+
+.intro_pyke iframe
+{
+    width:850px;
+    height:500px;
+    position: absolute;
+    margin-top: 130px; 
+    left: 40px;
+}
+
+.intro_pyke img
+{
+    border: 1px goldenrod solid;
+    width: 55px;
+}
+
+.intro_pyke h4
+{
+    color: #aa1616;
+    text-transform: uppercase;
+    margin: 0px;
+    padding: 0px;
+}
+
+.intro_pyke p
+{
+    color: #9ebfd6;
+    font-size: 13px;
+}
+
+#qwtext
+{
+    position: absolute;
+    right: 130px;
+    margin-top: 90px;
+    width: 30%;
+    height: 500px;
+}
+
+#last
+{
+    position: absolute;
+    bottom: 0px;
+}
+#last a
+{
+    text-decoration: none;
+    color: grey;
+    position: absolute;
+    left: 40px;
+    bottom: 165px;
+    font-size: 40px;
+}
+
+#last a:hover
+{
+    color: white;
+}

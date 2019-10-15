@@ -1,0 +1,322 @@
+body
+{
+    background-color: #000; /* Used if the image is unavailable */ 
+    cursor:url(../LOLImages/cursor.png) 50 50, auto;
+    margin: 0;
+    padding: 0;    
+    overflow: hidden;
+}
+
+@font-face
+{
+    font-family :font2;
+    src:url(../wordstyle/AlmendraSC-Regular.otf);
+}
+
+#navbar
+{
+    width: 100%;
+    background-color:black;
+    font-size: 45px;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    opacity: 0.7;
+    font-family: font2;
+    text-align: center;
+}
+
+#navbar a
+{
+    margin-left: 40px;
+    text-decoration: none;
+    color: #cccccc;
+}
+
+#navbar a:hover
+{
+    color: #ffffff;
+    border-bottom: 3px solid yellow;
+}
+
+.bg1
+{
+    background-image:url(../LOLImages/regis-bg1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover; 
+    
+    height: 47em;
+    
+    -webkit-filter : blur(3px);
+    -moz-filter : blur(3px);
+    -ms-filter : blur(3px);
+    -o-filter : blur(3px);
+    filter : blur(3px);
+}
+
+/*text1*/
+.text1 
+{
+    text-align: center;
+    color: white;
+    position: absolute;
+    top: 16%;
+    left: 120px;
+}
+
+.text1 h1
+{
+    font-size: 50px;
+    text-transform: uppercase;
+}
+
+.text1 p
+{
+    font-size: 30px;
+    text-transform: uppercase;
+}
+
+.text1 #divider1
+{
+    position: absolute;
+    width: 700px;
+    left: 10px;
+}
+
+/*small icon start*/
+.container
+{
+    bottom: 10%;
+    right: 0;
+    position: absolute;
+    width: 360px;   
+    background:rgba(0,0,0,0.1);
+    transform: rotate(-30deg) skew(25deg) scale(.15);
+    transition: 0.5s;
+}
+
+#fb
+{
+    right: 120px; 
+}
+
+#tw
+{
+    right: 240px;
+}
+
+.container img
+{
+    position: absolute;
+    width: 100%;
+    transition: 0.5s;
+}
+
+.container:hover img:nth-child(4)
+{
+    transform: translate(160px,-160px);
+    opacity:1;
+}
+
+.container:hover img:nth-child(3)
+{
+    transform: translate(120px,-120px);
+    opacity:.8;
+}
+
+.container:hover img:nth-child(2)
+{
+    transform: translate(80px,-80px);
+    opacity:.6;
+}
+
+.container:hover img:nth-child(1)
+{
+    transform: translate(40px,-40px);
+    opacity:.4;
+}
+/*small icon end*/
+
+
+.container_1
+{
+    position: absolute;
+    top: 120px;
+    right: 200px;
+    height: 500px;
+    width: 25%;
+}
+
+.middle
+{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.card
+{
+  border: 1px goldenrod solid;
+  width: 340px;
+  height: 480px;
+}
+
+.front,.back
+{
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  backface-visibility: hidden;
+  position: absolute;
+  transition: transform .6s linear;
+}
+
+.front img
+{
+  height: 100%;
+}
+.front
+{
+  transform: perspective(600px) rotateY(0deg);
+}
+
+.back
+{
+  background: #000;
+  transform: perspective(600px) rotateY(180deg);
+}
+
+.back-content
+{
+  color: #2c3e50;
+  width: 100%;
+}
+
+.back-content h2,.back-content p
+{
+    text-align: center;
+    font-family: font2;
+    color: white; 
+}
+
+.back-content h2
+{
+    color: red;
+}
+
+.sm
+{
+  margin: 20px 0;
+}
+
+.sm 
+{
+  width: 40px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  transition: 0.4s;
+}
+
+.card:hover > .front
+{
+  transform: perspective(600px) rotateY(-180deg);
+}
+
+.card:hover > .back
+{
+  transform: perspective(600px) rotateY(0deg);
+}
+
+form
+{
+    display: block;
+    padding: 10px; 
+    color: white; 
+}
+
+input[type=text], input[type=password], select 
+{
+    width: 95%;
+    padding: 8px;
+    margin: 8px 10px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit]
+{
+    width: 95%;
+    background-color: black;
+    color: goldenrod;
+    text-transform: uppercase;
+    padding: 14px 20px;
+    margin: 8px 10px;
+    border: 1px goldenrod solid;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input:out-of-range
+{
+   background-color:red;
+}
+
+input:focus
+{
+   background-color:white;
+}
+
+form
+{
+    position: absolute;
+}
+ 
+.red
+{
+    color: #f42c4d;
+}
+
+
+/*Class Footer*/
+.footer
+{
+    margin-left: 30px;
+    position: absolute;
+    bottom: 0;
+    left:0;
+/*    border: 10px solid red;*/
+}
+
+.footer img
+{
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+.footer p
+{
+    float:right;
+    font-size: 15px;
+    color: white;
+    margin-left: 10px;
+}
+
+#contact
+{
+    position: absolute;
+}
+
+#location
+{
+    position: absolute;
+    margin-left: 220px;
+}
+
+#contact_email
+{
+    margin-left: 520px;
+}

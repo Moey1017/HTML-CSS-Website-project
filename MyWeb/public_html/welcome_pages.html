@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>League Of legends</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/welcome_pages.css" rel="stylesheet" type="text/css"/>
+        <link rel="icon" type="image/jpg" href="LOLImages/headicon.jpg">
+    </head>
+    <body>
+        <div id="wrap">
+        </div>
+        
+        <audio autoplay>
+            <source src="Music/M1.mp3" type="audio/mpeg">
+        </audio>            
+        <div id="navbar">
+                <a href="welcome_pages.html">Home</a>
+                <a href ="pyke_intro.html">Intro pyke</a>
+                <a href="trailer.html">Pyke</a>
+                <a href="sign_up.html">Sign Up</a>
+                <a href="tournament.html">Views</a>
+                <a href="teams.html">Teams</a>
+        </div>
+        
+        <div id="navbar_2">
+            <a href="#wrap">Home</a>
+            <a href="#aimg1">Pages1</a>
+            <a href="#aimg2">Pages2</a>
+            <a href="#iframe1">Trailer</a>
+        </div>
+         
+        <!-- it dont work in the script file-->
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/pixi.js/4.5.0/pixi.min.js'></script>
+        <script>
+         w=1000, h=667;
+        function resize() {
+            if (window.innerWidth / window.innerHeight >= ratio) {
+
+                var w = window.innerHeight * ratio;
+                var h = window.innerHeight;
+            } else {
+
+                var w = window.innerWidth;
+                var h = window.innerWidth / ratio;
+            }
+            renderer.view.style.width = w + 'px';
+            renderer.view.style.height = h + 'px';
+        }
+        window.onresize = resize;
+          </script>
+            <script>
+            // w=window.innerWidth, h = window.innerHeight;
+
+        var renderer = new PIXI.WebGLRenderer(window.innerWidth, window.innerHeight);
+        var cOutput = document.getElementById('wrap');
+        cOutput.appendChild(renderer.view);
+
+        var stage = new PIXI.Container();
+        var container = new PIXI.Container();
+        var foreground = new PIXI.Container();
+        stage.addChild(container);
+        stage.addChild(foreground); 
+
+        var f;
+        var fg;
+        var mousex = w/1, mousey = h/1;
+        var ploader = new PIXI.loaders.Loader();
+
+        function init(){
+
+
+          console.log('dasdsdasd');
+          ploader.add('fg', 'LOLImages/1053_new.jpg'); //insert Orignal 2d Image Here
+          ploader.add('depth', 'LOLImages/1580_new.jpg'); //insert Depth Map Here
+
+          ploader.once('complete', startMagic);
+          // Begin loading -
+          ploader.load();
+        }
+
+        function startMagic() {
+          fg = new PIXI.Sprite(ploader.resources.fg.texture);
+
+          foreground.addChild(fg);
+
+          d = new PIXI.Sprite(ploader.resources.depth.texture);
+            f = new PIXI.filters.DisplacementFilter(d, 0);
+            fg.filters = [f];  
+            window.onmousemove = function(e) {
+              mousex = e.clientX;
+              mousey = e.clientY;
+            };
+          animate();
+        }
+
+
+        function animate() {
+        console.log('aaaaaaaaaa');
+          f.scale.x = (window.innerWidth/2 - mousex) / 50;
+          f.scale.y = (window.innerHeight/2 - mousey) / 50;
+          fg.addChild(d);
+          d.renderable=false;
+
+          renderer.render(stage);       
+          requestAnimationFrame(animate);
+        }
+
+        // Start -
+        init();
+    </script>
+    
+            <div id="image1">
+                <img src="LOLImages/LOL.png" alt=""/>
+                <ul>
+                    <li id="D1"><a href="myweb3.html">Intro Pyke</a></li>
+                    <li id="D2"><a href="">Intro Zoe</a></li>
+                    <li id="D3"><a href="">Intro Nunu</a></li>
+                </ul>
+            </div>
+        <div class="bg-video">
+            <video preload="auto" autoplay="autoplay" loop muted>
+                <source src="Music/bg3.mp4" type="video/mp4">
+            </video>
+        </div>
+    
+        <div class="intro">
+            <div class="IMG1" id="aimg1">
+                <div id="paragraph1">
+                    <h1><strong>The most played PC game in North America and Europe.</strong></h1>
+                    <p>League of Legends was generally well received upon its release in 2009, and has since grown in popularity, with an active and expansive fanbase.</p>
+                </div>
+            </div>
+            <div class="IMG2" id="aimg2">
+                <div id="paragraph2">
+                    <h1><strong>ALL CHAMPIONS ARE FREE</strong></h1>
+                    <p>There are currently 141 champions in League of Legends and all heroes are free.Riot Games has classified all champions as one of six types to aid beginners.</p>
+                </div>
+            </div>
+            
+            <div id="iframe1">
+                <iframe src="https://www.youtube.com/embed/8fwwGCr1-po"></iframe>
+            </div>
+            
+            <div class="arrow1"></div>
+            <div class="arrow2"></div>
+            <div class="arrow3"></div>
+            
+            <div class="paragraph3">
+                <h2>FIND YOUR ROLE </h2>
+                <p>Pick a lane. Pick a champ.<br>Step onto The Rift.</p>
+                <h2>JOIN YOUR TEAM</h2>
+                <p>The rest of your squad awaits -<br> victory is achieved when you <br>work together!</p>
+                <h2>PLAY FOR FREE</h2>
+                <p>No joke. League is free.<br>Never pay to win.</p>
+            </div>
+        </div>
+
+        <div class="bottom">
+            <div id="teen">
+                <a href = "http://www.esrb.org/ratings/ratings_guide.aspx" target = "_blank"><img src="LOLImages/teen2.png" alt="Teen"></a>
+            </div>
+            <div id="t1">
+                <h3>Blood</h3>
+                <h3>Fantasy Violance</h3>
+                <h3>Mild Suggestive Themes</h3>
+                <h3>Use of Alcohol and Tobacco</h3>
+                <h3>Online Interactions Not Rated by the ESRB</h3>
+            </div>
+            <div id="riotIcon">
+                <a href="https://na.leagueoflegends.com/en/"><img src="LOLImages/riotIcon.png" alt="riotIcon" width="110" height="90"></a>
+            </div>             
+            <div id="copyright1">
+                &copy;2018 !Riot Games, inc. !All rights reserved.
+            </div>
+        </div>
+        
+    </body>
+</html>

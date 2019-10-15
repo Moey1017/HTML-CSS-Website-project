@@ -1,0 +1,92 @@
+body
+{
+    cursor:url(LOLImages/cursor.png) 50 50, auto;
+}
+.bg-video1
+{
+    width: 100%;
+    height:100vh;
+    z-index:-1; 
+    top: 0; 
+    left: 0; 
+    position: absolute;
+    overflow: hidden;
+}
+
+.bg-video1 video
+{
+    min-width: 100%;
+    min-height: 100%;
+}
+
+#skip
+{
+    z-index:0;
+    position: absolute;
+    bottom: 0;
+    right: 10px;
+    padding-right: 20px;
+}
+
+#skip p
+{
+    font-size: 30px;
+}
+
+#skip a
+{
+    opacity: 0.4;
+    color:white;
+    text-decoration: none;
+}
+
+#skip a:hover
+{
+    font-size: 40px;
+    color:red;
+    animation: Small_big1 1.5s both linear;
+}
+
+@keyframes Small_big1
+{
+   0%
+   {
+	font-size:30px;
+   }
+   2% 
+   {
+	font-size:40px;
+   }
+   100%
+   {
+         opacity:1;
+   }
+}
+
+#back
+{
+    z-index:0;
+    position: absolute;
+    bottom: 0;
+    left: 10px;
+    padding-left: 20px;
+}
+
+#back p
+{
+    font-size: 30px;
+}
+
+#back a
+{
+    opacity: 0.4;
+    color:white;
+    text-decoration: none;
+}
+
+#back a:hover
+{
+    font-size: 40px;
+    color:red;
+    animation: Small_big1 1.5s both linear;
+}

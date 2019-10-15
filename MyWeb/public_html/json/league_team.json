@@ -1,0 +1,62 @@
+[
+    {
+        "TeamName" : "SKT T1(SK Telecom T1)",
+        "Top" : "THAL(KWON HYUK PARK)",
+        "Jungle" : "BLANK(UNGU KANG)",
+        "Mid" : "FAKER(SANGHYEOK LEE)",
+        "ADC" : "BANG(JUNSIK BAE)",
+        "Support" : "WOlf(AEWAN LEE)",   
+        "WinRates" : "74%"
+    },
+    
+    
+    {
+        "TeamName" : "EDG(EDward Gaming)",
+        "Top" : "Ray(Jeon Ji-won)",
+        "Jungle" : "Clearlove(Ming Kai)",
+        "Mid" : "Scout(Lee Ye-chan)",
+        "ADC" : "IBoy(Hu Xian-zhao)",
+        "Support" : "Meiko(Tian Ye)",   
+        "WinRates" : "73%"
+    },
+    
+    {
+        "TeamName" : "RNG(ROYAL NEVER GIVE UP)",
+        "Top" : "LETME(JUNZE YAN)",
+        "Jungle" : "MLXG(SHIYU LIU)",
+        "Mid" : "XIAOHU(YUANHAO LI)",
+        "ADC" : "UZI(ZIHAO JIAN)",
+        "Support" : "MING(SENMING SHI)",
+        "WinRates" : "70%"
+    },
+    
+    {
+        "TeamName" : "FWTW(FLASH WOLVES)",
+        "Top" : "HANABI(Su Chia-Hsiang)",
+        "Jungle" : "MAPLE(Huang Yi-Tang)",
+        "Mid" : "Betty(Lu Yu-Hung)",
+        "ADC" : "SwordArt(Hu Shuo-Chieh)",
+        "Support" : "ShiauC(Liu Chia-Hao)",  
+        "WinRates" : "69%"
+    },
+    
+    {
+        "TeamName" : "KT ROLSTER",
+        "Top" : "SMEB(KYUNGHO SONG)",
+        "Jungle" : "SCORE(DONGBIN KO)",
+        "Mid" : "UCAL(WOOHYUN SON)",
+        "ADC" : "DEFT(HYEOKGYU KIM)",
+        "Support" : "MATE(SEHYOUNG CHO)", 
+        "WinRates" : "67%"
+    },
+    
+    {
+        "TeamName" : "FNC(FNATIC)",
+        "Top" : "SOAZ(PAUL BOYER)",
+        "Jungle" : "BROXAH(MADS BROCK-PEDERSEN)",
+        "Mid" : "CAPS(RASMUS WINTHER)",
+        "ADC" : "REKKLES(MARTIN LARSSON)",
+        "Support" : "HYLISSANG(ZDRAVETS ILIEV GALABOV)",   
+        "WinRates" : "64%"
+    }
+]
